@@ -7,5 +7,6 @@ import streamlit as st
 def carregar_dados():
     
     df_municipios = pd.read_csv('data_sus/infogripe-master/Dados/InfoGripe/2020-2024/macrorregiao_municipios_fx_etaria_casos_2024.csv')
-    
-    return df_municipios
+    df_capitais = pd.read_csv('data_sus/infogripe-master/Dados/InfoGripe/2020-2024/capitais_serie_estimativas_fx_etaria.csv')
+  
+    return df_municipios, df_capitais

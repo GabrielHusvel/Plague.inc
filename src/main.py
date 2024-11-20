@@ -1,5 +1,4 @@
 import streamlit as st
-from api import APP  # Importar a API FastAPI
 from gripe_mapa_regional import create_dashboard
 # from gripe_mapa_capital import map_capital
 from config import configure_page  # Configuração inicial do Streamlit
@@ -30,6 +29,7 @@ choice = st.sidebar.selectbox("Navegue pelo App", menu)
 
 # Tela Inicial
 if choice == "Tela Inicial":
+    st.image("https://i.imgur.com/gygo72j.jpg", use_column_width=True)
     st.title("Bem-vindo ao Sistema de Consulta de Doenças Plague.inf☣️")
     st.markdown(
         """
@@ -49,7 +49,7 @@ if choice == "Tela Inicial":
         **⚠️ Nota:** Os dados são atualizados periodicamente para refletir a situação mais recente.
         """
     )
-    st.image("https://i.imgur.com/gygo72j.jpg", use_column_width=True)
+    
 
 # Chat de Consulta
 elif choice == "Chat de Consulta":
